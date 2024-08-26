@@ -215,12 +215,9 @@ class Polyedr:
     # Метод вычисления требуемой площади граней
     def calculate_area(self):
         total_area = 0.0
-        print('boom')
         for facet in self.facets:
-            print('boom')
             if (facet.is_fully_invisible() and
                     facet.angle_with_horizontal() <= pi/7 and
                     facet.is_outside_unit_cube()):
-                print('boom')
                 total_area += facet.area()
         return total_area
